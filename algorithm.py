@@ -3,11 +3,11 @@ import random
 
 random.seed(90210)
 
-diseases = ['MEL', 'NV', 'BCC', 'AKIEC', 'BKL', 'DF', 'VASC']
+diagnoses = ['MEL', 'NV', 'BCC', 'AKIEC', 'BKL', 'DF', 'VASC']
 
 
 def my_algorithm(image):
-    return [random.random() for _ in range(len(diseases))]
+    return [random.random() for _ in range(len(diagnoses))]
 
 
 # print headers
