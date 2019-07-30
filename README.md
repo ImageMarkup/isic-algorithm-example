@@ -12,20 +12,26 @@ docker build --tag my-algorithm .
 ```
 
 ## Publishing your algorithm
-For the ISIC Challenge to have access to your algorithm, the Docker image must be published on [Docker Hub](https://hub.docker.com/).
+For the ISIC Challenge to have access to your algorithm, the Docker image must be published on [Docker Hub](https://hub.docker.com/). Follow these steps to publishing:
 
-There are a few steps to this process
 1) [Create an account on Docker Hub](https://hub.docker.com/signup)
 2) [Create a repository](https://docs.docker.com/docker-hub/repos/#creating-repositories)
 3) [Push the image](https://docs.docker.com/docker-hub/repos/#pushing-a-docker-container-image-to-docker-hub)
 
 # Running this example
+
+## Building it locally
 ```
 git clone git@github.com:ImageMarkup/isic-algorithm-example.git
 cd isic-algorithm-example
 
 # Note: nvidia-docker can be used when packaging your algorithms,
 # but is unnecessary for this example
-docker build -t isic-algorithm-example .
+docker build --tag isic-algorithm-example .
 docker run --volume $(pwd)/example-images:/images isic-algorithm-example
+```
+
+## Running from Docker Hub
+```
+docker run --volume /some/path/to/images:/images isic/isic-algorithm-example
 ```
