@@ -1,3 +1,4 @@
+[![dockeri.co](https://dockeri.co/image/isic/isic-algorithm-example)](https://hub.docker.com/r/isic/isic-algorithm-example)
 # isic-algorithm-example
 This is a template which illustrates how to package an algorithm with Docker for submission to the [ISIC Challenge](https://challenge.isic-archive.com).
 
