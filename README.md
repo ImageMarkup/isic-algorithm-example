@@ -5,7 +5,7 @@ This is a template which illustrates how to package an algorithm with Docker for
 To package an algorithm for the ISIC Challenge, a Docker image must be created. The algorithm must meet 2 requirements:
 1) The algorithm must produce scores for all JPEG images accessible at `/images`.
 2) The algorithm must produce headers and scores in CSV format directly to `stdout`.   
-   See below to view the output of this container when run on the data in `example-images`.
+   See below to view the output of this container when run on a set of sample images.
 
 Once these are fulfilled, a Docker image can be built with a command like the following:
 ```
@@ -29,7 +29,7 @@ cd isic-algorithm-example
 # Note: nvidia-docker can be used when packaging your algorithms,
 # but is unnecessary for this example
 docker build --tag isic-algorithm-example .
-docker run --volume $(pwd)/example-images:/images isic-algorithm-example
+docker run --volume /some/path/to/images:/images isic-algorithm-example
 ```
 
 Produces:
