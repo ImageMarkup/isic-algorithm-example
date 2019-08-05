@@ -20,5 +20,6 @@ print(','.join(['image'] + diagnoses))
 
 # print scores for each image
 for input_file in os.listdir('/images'):
-    scores = my_algorithm(input_file)
-    print(','.join([input_file] + [str(x) for x in scores]))
+    if input_file.endswith('.jpg'):
+        scores = my_algorithm(input_file)
+        print(','.join([input_file.replace('.jpg', '')] + [str(x) for x in scores]))
